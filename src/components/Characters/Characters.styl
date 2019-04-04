@@ -1,0 +1,29 @@
+@import './../../variables.styl'
+
+//elements
+.root
+	display: flex
+	flex-wrap: wrap
+
+.name
+	flex-grow: 1
+	width: 44%
+	margin: 3%
+	height: 100px
+	display: flex
+	justify-content: center
+	align-items: center
+	border: 1px solid $grey_color
+	cursor: pointer
+	box-shadow: 0 0 20px 0 darken($grey_color, 20)
+	transition: .3s all ease-in-out
+
+	&:hover
+		transform: translateY(-10px)
+		box-shadow: 0 0 20px 0 darken($grey_color, 10)
+
+@media screen and (max-width: 720px)
+	.name
+		width: 100%
+
+//modifiers
