@@ -1,4 +1,4 @@
-# Welcome to StarWars museum
+# Welcome to Star Wars museum
 
 ## How to start ?
 Before launching the project run
