@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import throttle from 'lodash/throttle';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import configureStore from './configureStore';
 import { saveState } from './helpers/localStorage';
@@ -24,9 +24,9 @@ store.subscribe(throttle(() => {
 const render = (Component) => {
     ReactDOM.render(
         <Provider store={store}>
-            <BrowserRouter>
+            <HashRouter>
                 <Component />
-            </BrowserRouter>
+            </HashRouter>
         </Provider>,
         document.getElementById('app')
     );

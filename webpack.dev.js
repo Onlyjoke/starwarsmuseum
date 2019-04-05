@@ -3,12 +3,14 @@ const path = require('path');
 
 const common = require('./webpack.common.js');
 
-
 module.exports = merge(common, {
     mode: 'development',
     devtool: 'eval',
     output: {
         filename: '[name].min.js'
+    },
+    devServer: {
+        historyApiFallback: true
     },
     module: {
         rules: [
