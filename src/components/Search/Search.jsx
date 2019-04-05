@@ -14,7 +14,7 @@ const Search = (props) => {
             <input
                 type='text'
                 className={css.input}
-                placeholder='Enter name'
+                placeholder='Enter character'
                 value={searchInput}
                 onChange={(e) => handleChange(e)}
             />

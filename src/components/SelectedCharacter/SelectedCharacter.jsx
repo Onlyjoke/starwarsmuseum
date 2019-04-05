@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import css from './SelectedCharacter.styl';
+import Preloader from '../../helpers/Preloader/Preloader';
 
 const SelectedCharacter = (props) => {
-    const {
-        selectedCharacter,
-        handleBackClick
-    } = props;
+    const { selectedCharacter } = props;
+
     return (
         <div className={css.root}>
-            <button
-                type='button'
+            <Link
+                to='/'
                 className={css.back}
-                onClick={() => handleBackClick()}
             >
                 Back to search
-            </button>
+            </Link>
             <div className={css.fade} />
             <div className={css.starWars}>
                 <div className={css.crawl}>
@@ -51,8 +50,7 @@ const SelectedCharacter = (props) => {
 };
 
 SelectedCharacter.propTypes = {
-    selectedCharacter: PropTypes.object,
-    handleBackClick: PropTypes.func
+    selectedCharacter: PropTypes.object
 };
 
-export default SelectedCharacter;
+export default Preloader('selectedCharacter')(SelectedCharacter);
